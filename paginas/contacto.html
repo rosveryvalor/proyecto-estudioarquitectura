@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&Asociados</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../recursos/iconos_logos/logo_arqui_curso.png" height="100" width="100" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="formulario">
+        <form action="/signup" method="post">
+            <label class="tituloPresupuesto">Consulta tu Presupuesto GRATIS!</label><br>
+            <p>
+                <label>Nombre</label><br>
+                <input type="text" name="first_name">
+            </p>
+            <p>
+                <label>Email</label><br>
+                <input type="email" name="email" required>
+            </p>
+            <p>
+                <label>Numero Telefonico</label><br>
+                <input type="tel" name="phone">
+            </p>
+            <p>
+                <label>Consulta</label><br>
+                <textarea placeholder="Escribe tu consulta..." name="mensaje" rows="5" cols="40"></textarea>
+            </p>
+            <p>
+                <p>Sexo</p>
+                <label>
+                    <input type="radio" name="title" value="mr">
+                    Masculino
+                </label>
+                <label>
+                    <input type="radio" name="title" value="mrs">
+                    Femenino
+                </label>
+                <label>
+                    <input type="radio" name="title" value="miss">
+                    Otro
+                </label>
+            </p>
+            <p>
+                <label>Pais</label><br>
+                <select>
+                    <option>Argentina</option>
+                    <option>Chile</option>
+                    <option>Colombia</option>
+                    <option>Mexico</option>
+                    <option>Uruguay</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" value="terms">
+                    Acepto los <a href="/terms">Terminos y Condiciones</a>
+                </label>
+            </p>
+            <p>
+                <button>Enviar</button>
+            </p>
+        </form>
+    </div>    
+    <footer>
+        <div class="suscripcion">
+            <form action="/subscribe" method="post">
+                <fieldset>
+                    <legend>Subscribete para mas novedades</legend>
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                    <button>Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="../recursos/iconos_logos/icon_whatsapp.png" ></a>
+        </div>
+        <div class="border-map">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbca5a8723ad%3A0x841c1c80b44698b1!2sCinemark!5e0!3m2!1ses-419!2sar!4v1757367585363!5m2!1ses-419!2sar" ></iframe>
+        </div>
+        <div class="direccion">
+            <p>Av. La Plata 3763, Barrio Boedo. Capital Federal</p>
+        </div>
+        <p class="pie">&copy; 2025 R&Asociados. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
