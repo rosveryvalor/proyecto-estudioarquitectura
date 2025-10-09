@@ -4,72 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&Asociados</title>
+    <!-- bs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--link css-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <header>
-        <a href="#"><img class="logo" src="./recursos/iconos_logos/logo_arqui_curso.png" alt=""></a>
-        <nav>
-            <ul>
-                <li><a class="item" href="./paginas/proyectos.html">Proyectos</a></li>
-                <li><a class="item" href="./paginas/servicios.html">Servicios</a></li>
-                <li><a class="item" href="./paginas/contacto.html">Contactos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fondo-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><img class="logo" src="./recursos/iconos_logos/logo_arqui_curso.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./paginas/proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./paginas/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./paginas/contacto.html">Contactanos</a>
+            </li>
+        </ul>
+        </div>
+    </div>
         </nav>
     </header>
     <main>
         <section class="banner"> 
-            <h1 class="titulo">Estudio de Arquitectura R&A</h1>
-            <p class="tituloTexto">Hacemos realidad el hogar de tus sueños</p>
+            <div class="banner-text"></div>
+                <h1 >Estudio de Arquitectura R&A</h1>
+                <p >Hacemos realidad el hogar de tus sueños</p>
+            </div>
         </section>
-        <section>
-            <h2 class="tituloPresentacion">De la mano con un gran grupo de Profesionales</h2>
-            <p class="tituloPresentacionTexto">
-                    Somos Rosvery y Norma un par de Arquitectas donde los años de Experiencias
+        <section class="content-section">
+            <div class="image-container">
+                <img src="./recursos/imagenes/2arquis.jpg" alt="">
+            </div>
+            <div class="text-container">
+                <h2>De la mano con un gran grupo de Profesionales</h2>
+                <p>Somos Rosvery y Norma un par de Arquitectas donde los años de Experiencias
                 y la inovacion actual van a la par, nos encagamos desde el anteproyecto con Renders
                 realistas, hasta la Direccion y Ejecucion de Obra, Con nuestro fiel Equipo de Profesionales
                 el hacer Reformas, Hogares desde cero, pintureria, resolucion de problemas en Obra
-                y mucho mas, sera nuestro pan de cada dia, para que habites tu lugar soñado. 
-            </p>
-            <img src="./recursos/imagenes/2arquis.jpg" height="400" width="400" alt="">
+                y mucho mas, sera nuestro pan de cada dia, para que habites tu lugar soñado.</p>
+            </div>
         </section>
-        <section>
-            <h2>Proyectos</h2>
-            <article>
-                <img src="./recursos/imagenes/casa1.jpeg" height="400" width="300" alt="">
-                <h3>Viviendas</h3>
-            </article>
-            <article>
-                <img src="./recursos/imagenes/cocina.jpeg" height="400" width="300" alt="">
-                <h3>Cocinas</h3>
-            </article>
-            <article>
-                <img src="./recursos/imagenes/baño.jpeg" height="400" width="300" alt="">
-                <h3>Baños</h3>
-            </article>
-        </section>
+        <div>
+            <h2 class="titulocategoriainicio" >PROYECTOS</h2>
+        </div>
+        <div class="row row-cols-3 g-3 cards-ajustadas">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./recursos/imagenes/casa1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Viviendas</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./recursos/imagenes/cocina.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Cocinas</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./recursos/imagenes/baño.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Baños</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="suscripcion">
-            <form action="/subscribe" method="post">
-                <fieldset>
-                    <legend>Subscribete para mas novedades</legend>
-                    <input type="email" name="email" placeholder="ejemplo@gmail.com">
-                    <button>Enviar</button>
-                </fieldset>
-            </form>
-        </div>
-        <div class="whatsapp">
-            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="./recursos/iconos_logos/icon_whatsapp.png" ></a>
-        </div>
-        <div class="border-map">
-            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbca5a8723ad%3A0x841c1c80b44698b1!2sCinemark!5e0!3m2!1ses-419!2sar!4v1757367585363!5m2!1ses-419!2sar" ></iframe>
-        </div>
-        <div class="direccion">
-            <p>Av. La Plata 3763, Barrio Boedo. Capital Federal</p>
+        <div class="container-footer">
+            <div class="suscripcion">
+                <form action="/subscribe" method="post">
+                    <fieldset>
+                        <legend>Subscribete para mas novedades</legend>
+                        <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                        <button>Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="container-map">
+                <div class="border-map">
+                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbca5a8723ad%3A0x841c1c80b44698b1!2sCinemark!5e0!3m2!1ses-419!2sar!4v1757367585363!5m2!1ses-419!2sar" ></iframe>
+                </div>
+                <div class="direccion">
+                    <p>Av. La Plata 3763, Barrio Boedo. Capital Federal</p>
+                </div>
+            </div>
         </div>
         <p class="pie">&copy; 2025 R&Asociados. Todos los derechos reservados.</p>
     </footer>
+        <div class="whatsapp">
+            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="./recursos/iconos_logos/icon_whatsapp.png" ></a>
+        </div>
+    <!--js bs-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

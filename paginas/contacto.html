@@ -4,94 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&Asociados</title>
+    <!-- bs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--link css-->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../recursos/iconos_logos/logo_arqui_curso.png" height="100" width="100" alt=""></a>
-        <nav>
-            <ul>
-                <li><a href="./proyectos.html">Proyectos</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fondo-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"><img class="logo" src="../recursos/iconos_logos/logo_arqui_curso.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contactanos</a>
+            </li>
+        </ul>
+        </div>
+    </div>
         </nav>
     </header>
-    <div class="formulario">
-        <form action="/signup" method="post">
-            <label class="tituloPresupuesto">Consulta tu Presupuesto GRATIS!</label><br>
-            <p>
-                <label>Nombre</label><br>
-                <input type="text" name="first_name">
-            </p>
-            <p>
-                <label>Email</label><br>
-                <input type="email" name="email" required>
-            </p>
-            <p>
-                <label>Numero Telefonico</label><br>
-                <input type="tel" name="phone">
-            </p>
-            <p>
-                <label>Consulta</label><br>
-                <textarea placeholder="Escribe tu consulta..." name="mensaje" rows="5" cols="40"></textarea>
-            </p>
-            <p>
-                <p>Sexo</p>
-                <label>
-                    <input type="radio" name="title" value="mr">
-                    Masculino
-                </label>
-                <label>
-                    <input type="radio" name="title" value="mrs">
-                    Femenino
-                </label>
-                <label>
-                    <input type="radio" name="title" value="miss">
-                    Otro
-                </label>
-            </p>
-            <p>
-                <label>Pais</label><br>
-                <select>
+    <main>
+        <section class="presupuesto">
+            <div class="presupuesto-contenido">
+                <div class="presupuesto-texto">
+                    <h1 class="titulo-principal">Consulta tu Presupuesto GRATIS</h1>
+                    <p>Completá el formulario y te responderemos a la brevedad con una propuesta adaptada a tus necesidades.</p>
+                </div>
+                <form class="formulario" action="/signup" method="post">
+                <div class="form-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="first_name" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="telefono">Número Telefónico</label>
+                    <input type="tel" id="telefono" name="phone" placeholder="+54 9 11 1234-5678">
+                </div>
+                <div class="form-grupo">
+                    <label for="mensaje">Consulta</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Contanos tu idea o proyecto..." rows="5"></textarea>
+                </div>
+                <fieldset class="form-radio">
+                    <legend>Sexo</legend>
+                    <label><input type="radio" name="title" value="mr"> Masculino</label>
+                    <label><input type="radio" name="title" value="mrs"> Femenino</label>
+                    <label><input type="radio" name="title" value="miss"> Otro</label>
+                </fieldset>
+                <div class="form-grupo">
+                    <label for="pais">País</label>
+                    <select id="pais" name="pais">
+                    <option value="">Selecciona un país</option>
                     <option>Argentina</option>
                     <option>Chile</option>
                     <option>Colombia</option>
-                    <option>Mexico</option>
+                    <option>México</option>
                     <option>Uruguay</option>
-                </select>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" value="terms">
-                    Acepto los <a href="/terms">Terminos y Condiciones</a>
-                </label>
-            </p>
-            <p>
-                <button>Enviar</button>
-            </p>
-        </form>
-    </div>    
+                    </select>
+                </div>
+                <div class="form-check">
+                    <label>
+                    <input type="checkbox" required>
+                    Acepto los <a href="/terms" target="_blank">Términos y Condiciones</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>   
     <footer>
-        <div class="suscripcion">
-            <form action="/subscribe" method="post">
-                <fieldset>
-                    <legend>Subscribete para mas novedades</legend>
-                    <input type="email" name="email" placeholder="ejemplo@gmail.com">
-                    <button>Enviar</button>
-                </fieldset>
-            </form>
-        </div>
-        <div class="whatsapp">
-            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="../recursos/iconos_logos/icon_whatsapp.png" ></a>
-        </div>
-        <div class="border-map">
-            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbca5a8723ad%3A0x841c1c80b44698b1!2sCinemark!5e0!3m2!1ses-419!2sar!4v1757367585363!5m2!1ses-419!2sar" ></iframe>
-        </div>
-        <div class="direccion">
-            <p>Av. La Plata 3763, Barrio Boedo. Capital Federal</p>
+        <div class="container-footer">
+            <div class="suscripcion">
+                <form action="/subscribe" method="post">
+                    <fieldset>
+                        <legend>Subscribete para mas novedades</legend>
+                        <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                        <button>Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="container-map">
+                <div class="border-map">
+                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.337016595504!2d-58.42875065!3d-34.620992550000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbca5a8723ad%3A0x841c1c80b44698b1!2sCinemark!5e0!3m2!1ses-419!2sar!4v1757367585363!5m2!1ses-419!2sar" ></iframe>
+                </div>
+                <div class="direccion">
+                    <p>Av. La Plata 3763, Barrio Boedo. Capital Federal</p>
+                </div>
+            </div>
         </div>
         <p class="pie">&copy; 2025 R&Asociados. Todos los derechos reservados.</p>
     </footer>
+        <div class="whatsapp">
+            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="../recursos/iconos_logos/icon_whatsapp.png" ></a>
+        </div>
+    <!--js bs-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
