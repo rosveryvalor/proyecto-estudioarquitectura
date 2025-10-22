@@ -1,0 +1,85 @@
+/*----------- Index ----------*/
+.banner {
+        background-image: url(../recursos/imagenes/bannerr.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        max-width: 100%;
+        background-blend-mode: darken;
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content: center;
+        
+        .banner-text {
+            max-width: 900px;
+            h1 {
+                color: #F9F7F7;
+                font-size: 4rem;
+                font-weight: 600;
+                line-height: 1.2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            p {
+                color: #F9F7F7;
+                font-size: 1.4rem;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+}
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;                   
+    padding: 8rem 4rem;
+    max-width: 1200px;
+    margin: auto;
+    .image-container { 
+        img {
+            width: 100%;
+            max-width: 500px;              
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+    }
+    .text-container {
+        max-width: 500px;
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+div {
+    h2.titulocategoriainicio {
+            display: flex;
+            margin-left: 220px;
+            font-size: 1rem;
+            color: #918868;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+    }
+
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s ease;
+    }
+}

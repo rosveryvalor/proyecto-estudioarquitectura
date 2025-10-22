@@ -6,38 +6,38 @@
     <title>R&Asociados</title>
     <!-- bs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!--link css-->
-    <link rel="stylesheet" href="./css/style.css">
+    <!--link SASS-->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fondo-nav">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"><img class="logo" src="./recursos/iconos_logos/logo_arqui_curso.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="./paginas/proyectos.html">Proyectos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./paginas/servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./paginas/contacto.html">Contactanos</a>
-            </li>
-        </ul>
-        </div>
-    </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img class="logo" src="./recursos/iconos_logos/logo_arqui_curso.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./paginas/proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./paginas/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./paginas/contacto.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section class="banner"> 
-            <div class="banner-text"></div>
-                <h1 >Estudio de Arquitectura R&A</h1>
-                <p >Hacemos realidad el hogar de tus sueños</p>
+            <div class="banner-text">
+                <h1>Estudio de Arquitectura R&A</h1>
+                <p>Hacemos realidad el hogar de tus sueños</p>
             </div>
         </section>
         <section class="content-section">
@@ -54,32 +54,38 @@
             </div>
         </section>
         <div>
-            <h2 class="titulocategoriainicio" >PROYECTOS</h2>
+            <h2 class="titulocategoriainicio">PROYECTOS</h2>
         </div>
         <div class="row row-cols-3 g-3 cards-ajustadas">
             <div class="col">
-                <div class="card h-100">
-                    <img src="./recursos/imagenes/casa1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Viviendas</h3>
+                <a href="./paginas/proyectos.html" class="card-link">
+                    <div class="card h-100">
+                        <img src="./recursos/imagenes/casa1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">Viviendas</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col">
-                <div class="card h-100">
-                    <img src="./recursos/imagenes/cocina.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Cocinas</h3>
+                <a href="./paginas/proyectos.html" class="card-link">
+                    <div class="card h-100">
+                        <img src="./recursos/imagenes/cocina.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">Cocinas</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col">
-                <div class="card h-100">
-                    <img src="./recursos/imagenes/baño.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Baños</h3>
+                <a href="./paginas/proyectos.html" class="card-link">
+                    <div class="card h-100">
+                        <img src="./recursos/imagenes/baño.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">Baños</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </main>
@@ -105,9 +111,11 @@
         </div>
         <p class="pie">&copy; 2025 R&Asociados. Todos los derechos reservados.</p>
     </footer>
-        <div class="whatsapp">
-            <a href="https://wa.me/1125041027" target="_blank"> <img class="dimensionesIcono" src="./recursos/iconos_logos/icon_whatsapp.png" ></a>
-        </div>
+    <div class="whatsapp">
+        <a href="https://wa.me/1125041027" target="_blank"> 
+            <img class="dimensionesIcono" src="./recursos/iconos_logos/icon_whatsapp.png">
+        </a>
+    </div>
     <!--js bs-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

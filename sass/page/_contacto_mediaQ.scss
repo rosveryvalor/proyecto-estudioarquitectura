@@ -1,0 +1,19 @@
+/*--------- Contacto mediaQuery-------*/
+@media (max-width: 480px) {
+    .presupuesto {
+        padding-top: 10px;
+        .presupuesto-contenido {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .formulario {
+                .form-radio {
+                    margin-bottom: 16px;
+                    legend {
+                        font-size: medium;
+                    }
+                }
+            }
+        }
+    }
+}

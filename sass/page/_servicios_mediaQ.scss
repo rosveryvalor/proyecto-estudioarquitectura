@@ -1,0 +1,44 @@
+/*--------- Servicios mediaQuery-------*/
+@media (max-width: 480px) {
+    .servicios {
+        margin-left: 20px;
+        margin-right: 20px;
+        .titulo-principal {
+            font-size: 1.5rem;
+        }
+        .servicios-layout {
+            display: flex;
+          flex-direction: column;
+            .servicios-imagen {
+                margin-left: 120px;
+                img {
+                    max-width: 300px;
+                    height: 320px;
+                }
+            }
+            .servicios-lista {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                .servicio {
+                    h2 {
+                        color: black;
+                        font-size: 1rem;
+                        margin-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    p {
+                        font-size: 0.7rem;
+                        line-height: 1.6;
+                        color: #272725;
+                    }
+                }
+            }
+        }
+        .servicios-final {
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}

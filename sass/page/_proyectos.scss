@@ -1,0 +1,57 @@
+
+    /*--------- Proyectos ---------*/
+    .titulonuestrosproyectos { 
+        h1 {
+            color: #918868;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            display: flex;
+            margin-left: 190px;
+            margin-top: 70px;
+        }
+    }
+    .row {
+        margin-top: 0px;
+        margin-left: 180px;
+        margin-right: 180px;
+        margin-bottom: 100px;
+        .col {
+            .card {
+                max-width: 300px;      
+                margin: auto; 
+                background-color: #F9F7F7;
+                border-color: #dedede;
+                border-radius: 14px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                }
+                .card-img-top {
+                    height: 400px;         
+                    object-fit: cover;
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+
+                }
+                .card-body {
+                    .card-title {
+                        text-align: center;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                    }
+                    .card-text {
+                        font-size: 0.9rem;
+                        line-height: 1.1rem;
+                        color: #333;
+                        text-align: center;
+                        margin-top: 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+        }
+    }

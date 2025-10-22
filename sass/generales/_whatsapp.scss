@@ -1,0 +1,30 @@
+/*--------- Whatsapp ---------*/
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #25D366;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+        .dimensionesIcono {
+            width: 55px;
+            height: 55px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+}
+
+
