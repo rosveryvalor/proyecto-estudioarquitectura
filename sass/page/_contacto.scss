@@ -11,15 +11,18 @@
         grid-template-columns: 1fr 1fr;
         gap: 50px;
         align-items: start;
+        margin-right: 30px;
+        margin-bottom: 100px;
         .presupuesto-texto {
             align-self:flex-start;
+            margin-left: 30px;
             .titulo-principal {
                 font-size: 2rem;
                 color: #918868;
                 font-weight: bold;
                 text-align: left;
                 margin-bottom: 20px;
-                margin-top: 70px;
+                margin-top: 10px;
             }
             p {
                 font-size: 1rem;

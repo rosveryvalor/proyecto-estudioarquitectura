@@ -21,7 +21,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             .servicio {
-                background-color: #F9F7F7;
+                background-color: #ffffff;
                 border-radius: 12px;
                 border: 1px solid #dedede;
                 padding: 25px;
@@ -60,9 +60,9 @@
     }
     .servicios-final {
         text-align: center;
-        margin-top: 90px;
+        margin-top: 150px;
         font-style: italic;
         color: #555;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
 }

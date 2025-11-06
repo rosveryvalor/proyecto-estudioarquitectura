@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------- Variables ---------*/
 body {
   font-family: "Arial", Helvetica, sans-serif;
@@ -14,18 +15,56 @@ header .fondo-nav a:hover {
   color: #F9F7F7;
 }
 header .fondo-nav .logo {
-  width: 55px;
+  width: 40px;
   border-radius: 50px;
-  margin-left: 2rem;
+  margin-left: 6rem;
 }
 header .fondo-nav ul.navbar-nav {
   list-style: none;
   color: #000000;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  margin-right: 2rem;
+  margin-right: 6rem;
+}
+header .fondo-nav ul.navbar-nav li.nav-item {
+  margin-right: 25px;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link {
+  position: relative;
+  color: #272725;
+  font-weight: bold;
+  transition: 0.3s ease;
+  padding-bottom: 6px;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link {
+  /* Hover */
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link:hover {
+  color: #F9F7F7;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link:hover::after {
+  width: 100%;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link {
+  /* Página activa */
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link.active {
+  color: #F9F7F7;
+}
+header .fondo-nav ul.navbar-nav li.nav-item .nav-link.active::after {
+  width: 100%;
 }
 
 /*----------- Index ----------*/
@@ -33,7 +72,7 @@ header .fondo-nav ul.navbar-nav {
   background-image: url(../recursos/imagenes/bannerr.jpg);
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 615px;
   max-width: 100%;
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.4);
@@ -61,6 +100,10 @@ header .fondo-nav ul.navbar-nav {
   text-align: center;
 }
 
+body {
+  background-color: #F9F7F7;
+}
+
 .content-section {
   display: flex;
   align-items: center;
@@ -68,6 +111,8 @@ header .fondo-nav ul.navbar-nav {
   padding: 8rem 4rem;
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .content-section .image-container img {
   width: 100%;
@@ -122,14 +167,14 @@ div h2.titulocategoriainicio {
 
 .row {
   margin-top: 0px;
-  margin-left: 180px;
-  margin-right: 180px;
-  margin-bottom: 100px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 150px;
 }
 .row .col .card {
-  max-width: 300px;
+  max-width: 250px;
   margin: auto;
-  background-color: #F9F7F7;
+  background-color: #Ffffff;
   border-color: #dedede;
   border-radius: 14px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -140,7 +185,7 @@ div h2.titulocategoriainicio {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .row .col .card .card-img-top {
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -186,7 +231,7 @@ div h2.titulocategoriainicio {
   gap: 25px;
 }
 .servicios .servicios-layout .servicios-lista .servicio {
-  background-color: #F9F7F7;
+  background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid #dedede;
   padding: 25px;
@@ -223,10 +268,10 @@ div h2.titulocategoriainicio {
 }
 .servicios .servicios-final {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 150px;
   font-style: italic;
   color: #555;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 /*------------ pagina contacto -------------*/
@@ -241,9 +286,12 @@ div h2.titulocategoriainicio {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: start;
+  margin-right: 30px;
+  margin-bottom: 100px;
 }
 .presupuesto .presupuesto-contenido .presupuesto-texto {
   align-self: flex-start;
+  margin-left: 30px;
 }
 .presupuesto .presupuesto-contenido .presupuesto-texto .titulo-principal {
   font-size: 2rem;
@@ -251,7 +299,7 @@ div h2.titulocategoriainicio {
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 .presupuesto .presupuesto-contenido .presupuesto-texto p {
   font-size: 1rem;
@@ -442,39 +490,40 @@ footer .pie {
 }
 
 /* -----------Index mediaQuery ----------*/
+/* mobile */
 @media (max-width: 480px) {
-  main .banner {
+  .banner {
     flex-direction: column;
     height: auto;
     padding: 4rem 1rem;
     text-align: center;
   }
-  main .banner .banner-text h1 {
+  .banner .banner-text h1 {
     font-size: 2rem;
     line-height: 1.2;
   }
-  main .banner .banner-text p {
+  .banner .banner-text p {
     font-size: 1rem;
   }
-  main .content-section {
+  .content-section {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1rem;
   }
-  main .content-section .image-container img {
+  .content-section .image-container img {
     max-width: 250px;
     margin-bottom: 1rem;
   }
-  main .content-section .text-container h2 {
+  .content-section .text-container h2 {
     font-size: 1.2rem;
     margin: 0 12px 0 12px;
     margin-bottom: 20px;
   }
-  main .content-section .text-container p {
+  .content-section .text-container p {
     font-size: 0.8rem;
     margin: 0 12px 0 12px;
   }
-  main div h2 .titulocategoriainicio {
+  div h2.titulocategoriainicio {
     justify-content: start;
     margin-left: 0;
     font-size: 0.9rem;
@@ -483,8 +532,47 @@ footer .pie {
     margin-top: 20px;
   }
 }
-
+/* tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .banner {
+    flex-direction: column;
+    height: 450px;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .banner .banner-text h1 {
+    font-size: 3rem;
+  }
+  .banner .banner-text p {
+    font-size: 1.2rem;
+  }
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  .content-section .image-container img {
+    max-width: 330px;
+    margin-bottom: 1.5rem;
+  }
+  .content-section .text-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  .content-section .text-container p {
+    font-size: 0.9rem;
+  }
+  div h2.titulocategoriainicio {
+    justify-content: start;
+    margin-left: 0;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
 /*----------- Proyectos mediaQuery ---------*/
+/* mobile */
 @media (max-width: 480px) {
   .titulonuestrosproyectos h1 {
     color: #918868;
@@ -500,8 +588,8 @@ footer .pie {
     --bs-gutter-x: 1rem;
     margin: 0 auto;
     justify-content: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 80px;
   }
   .row .col .card .card-img-top {
@@ -520,7 +608,42 @@ footer .pie {
     font-family: Arial, Helvetica, sans-serif;
   }
 }
+/* tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .titulonuestrosproyectos h1 {
+    color: #918868;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 90px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .row {
+    --bs-gutter-x: 1.5rem;
+    margin: 0 auto;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 100px;
+  }
+  .row .col .card .card-img-top {
+    height: 230px;
+  }
+  .row .col .card .card-body .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .row .col .card .card-body .card-text {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
 /*--------- Servicios mediaQuery-------*/
+/* mobile */
 @media (max-width: 480px) {
   .servicios {
     margin-left: 20px;
@@ -556,11 +679,58 @@ footer .pie {
     line-height: 1.6;
     color: #272725;
   }
+  .servicios .servicios-layout .servicios-lista .servicio {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .servicios .servicios-layout .servicios-lista .servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
   .servicios .servicios-final h3 {
     font-size: 1rem;
   }
 }
+/* tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .servicios {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .servicios .titulo-principal {
+    font-size: 2rem;
+  }
+  .servicios .servicios-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .servicios .servicios-layout .servicios-imagen {
+    margin-left: 0;
+  }
+  .servicios .servicios-layout .servicios-imagen img {
+    max-width: 350px;
+    height: auto;
+  }
+  .servicios .servicios-layout .servicios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .servicios .servicios-layout .servicios-lista .servicio h2 {
+    font-size: 1.3rem;
+  }
+  .servicios .servicios-layout .servicios-lista .servicio p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .servicios .servicios-final h3 {
+    font-size: 1.2rem;
+  }
+}
 /*--------- Contacto mediaQuery-------*/
+/* mobile */
 @media (max-width: 480px) {
   .presupuesto {
     padding-top: 10px;
@@ -575,6 +745,46 @@ footer .pie {
   }
   .presupuesto .presupuesto-contenido .formulario .form-radio legend {
     font-size: medium;
+  }
+}
+/* tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .presupuesto {
+    padding-top: 15px;
+  }
+  .presupuesto .presupuesto-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .presupuesto .presupuesto-contenido .presupuesto-texto {
+    text-align: center;
+  }
+  .presupuesto .presupuesto-contenido .presupuesto-texto .titulo-principal {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .presupuesto .presupuesto-contenido .presupuesto-texto p {
+    font-size: 1rem;
+  }
+  .presupuesto .presupuesto-contenido .formulario {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .presupuesto .presupuesto-contenido .formulario .form-radio {
+    margin-bottom: 18px;
+  }
+  .presupuesto .presupuesto-contenido .formulario .form-radio legend {
+    font-size: 1rem;
+  }
+  .presupuesto .presupuesto-contenido .formulario button,
+  .presupuesto .presupuesto-contenido .formulario .btn-enviar {
+    width: 100%;
+    font-size: 1rem;
   }
 }
 /* -----------Footer mediaQuery ----------*/
@@ -621,6 +831,48 @@ footer .pie {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 0;
+  }
+}
+footer {
+  /* tablet */
+}
+@media (min-width: 481px) and (max-width: 900px) {
+  footer {
+    padding: 40px 30px;
+  }
+  footer .container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .container-footer .suscripcion form input[type=email] {
+    width: 70%;
+    font-size: 1rem;
+  }
+  footer .container-footer .suscripcion form button {
+    font-size: 1.1rem;
+    padding: 8px 14px;
+  }
+  footer .container-map .border-map {
+    display: flex;
+    align-items: center;
+  }
+  footer .container-map .border-map .mapa {
+    width: 80%;
+    height: 130px;
+    margin-top: 30px;
+  }
+  footer .container-map .direccion {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+    font-size: 0.9rem;
+    color: #d8d8d8;
+  }
+  footer .pie {
+    font-size: 0.8rem;
+    margin-top: 40px;
   }
 }
 

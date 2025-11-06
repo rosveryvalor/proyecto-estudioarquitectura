@@ -1,4 +1,7 @@
 /*----------- Proyectos mediaQuery ---------*/
+
+/* mobile */
+
 @media (max-width: 480px) {
     .titulonuestrosproyectos {
         h1 {
@@ -16,8 +19,8 @@
         --bs-gutter-x: 1rem; 
         margin: 0 auto;
         justify-content: center;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
         margin-bottom: 80px;
         .col {
             .card {
@@ -35,6 +38,52 @@
                         color: #333;
                         text-align: center;
                         margin-top: 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .titulonuestrosproyectos {
+        h1 {
+            color: #918868;
+            font-size: 1.4rem; 
+            font-weight: 600;
+            margin-left: 90px; 
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .row {
+        --bs-gutter-x: 1.5rem;
+        margin: 0 auto;
+        justify-content: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 100px;
+
+        .col {
+            .card {
+                .card-img-top {
+                    height: 230px; 
+                }
+                .card-body {
+                    .card-title {
+                        font-size: 1.1rem; 
+                        font-weight: 600;
+                    }
+                    .card-text {
+                        font-size: 0.9rem;
+                        line-height: 1.2rem;
+                        color: #333;
+                        text-align: center;
+                        margin-top: 12px;
                         font-family: Arial, Helvetica, sans-serif;
                     }
                 }

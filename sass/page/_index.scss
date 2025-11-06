@@ -3,7 +3,7 @@
         background-image: url(../recursos/imagenes/bannerr.jpg);
         background-position: center;
         background-size: cover;
-        height: 500px;
+        height: 615px;
         max-width: 100%;
         background-blend-mode: darken;
         background-color: rgba(0,0,0,0.4);
@@ -31,6 +31,11 @@
             }
         }
 }
+
+body{
+    background-color: #F9F7F7;
+}
+
 .content-section {
     display: flex;
     align-items: center;
@@ -38,6 +43,8 @@
     padding: 8rem 4rem;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
     .image-container { 
         img {
             width: 100%;

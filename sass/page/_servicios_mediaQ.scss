@@ -1,4 +1,7 @@
 /*--------- Servicios mediaQuery-------*/
+
+/* mobile */
+
 @media (max-width: 480px) {
     .servicios {
         margin-left: 20px;
@@ -8,7 +11,7 @@
         }
         .servicios-layout {
             display: flex;
-          flex-direction: column;
+            flex-direction: column;
             .servicios-imagen {
                 margin-left: 120px;
                 img {
@@ -32,12 +35,70 @@
                         line-height: 1.6;
                         color: #272725;
                     }
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                    }
                 }
             }
         }
         .servicios-final {
             h3 {
                 font-size: 1rem;
+            }
+        }
+    }
+}
+
+/* tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .servicios {
+        margin-left: 40px;
+        margin-right: 40px;
+
+        .titulo-principal {
+            font-size: 2rem;
+        }
+
+        .servicios-layout {
+            display: flex;
+            flex-direction: column; 
+            gap: 30px;
+            align-items: center;
+
+            .servicios-imagen {
+                margin-left: 0;
+
+                img {
+                    max-width: 350px;
+                    height: auto;
+                }
+            }
+
+            .servicios-lista {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .servicio {
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+
+        .servicios-final {
+            h3 {
+                font-size: 1.2rem;
             }
         }
     }

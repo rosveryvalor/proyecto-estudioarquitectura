@@ -49,4 +49,60 @@ footer {
             margin-bottom: 0;
         }
     }
+
+
+/* tablet */
+
+    @media (min-width: 481px) and (max-width: 900px) {
+        padding: 40px 30px; 
+
+
+        .container-footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .suscripcion {
+                form {
+                    input[type="email"] {
+                        width: 70%;
+                        font-size: 1rem;
+                    }
+
+                    button {
+                        font-size: 1.1rem;
+                        padding: 8px 14px;
+                    }
+                }
+            }
+        }
+
+        .container-map {
+            .border-map {
+                display: flex;
+                align-items: center;
+
+
+                .mapa {
+                    width: 80%; 
+                    height: 130px; 
+                    margin-top: 30px;
+                }
+            }
+
+            .direccion {
+                margin-top: 10px;
+                margin-left: 20px;
+                margin-right: 30px;
+                font-size: 0.9rem;
+                color: #d8d8d8;
+            }
+        }
+
+        .pie {
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+    }
 }
